@@ -1,0 +1,23 @@
+# Embedding Numbas Questions
+
+[Numbas](https://numbas.org.uk) is an open-source e-assessment system aimed at mathematics and other numerate disciplines. It generates [SCORM 2004](https://scorm.com/scorm-explained/technical-scorm/scorm-2004-overview-for-developers/)-compliant, self-contained assessment packages, and can present randomised questions for practice and assessment.
+
+- Find out more about Numbas, including case studies and the latest blog posts, at [https://numbas.org.uk](https://numbas.org.uk).
+
+## Embedding a Numbas question
+
+To embed a Numbas question or exam, `Run` the question/exam from the Numbas editor, and click on the `Share` button. This will reveal a URL that can be embedded in your Quarto page.
+
+::: {.panel-tabset}
+
+## Appearance
+
+```{=html}
+<iframe src="https://numbas.mathcentre.ac.uk/question/177136/example-question-for-embedding-demo/embed/?token=4aa212ef-75db-457e-83a1-4cba63919c8b" width="780" height="500"></iframe>
+```
+
+## Markdown
+
+~~~markdown
+<iframe src="[URL]" width="780" height="500"></iframe>
+~~~

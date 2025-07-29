@@ -1,0 +1,12 @@
+# Example pages {#sec-late .unnumbered}
+
+::: { .callout-tip }
+This `.qmd` file introduces a `Part` of the Quarto book. We use the `{#sec-REFERENCE}` option to make it cross-referenceable elsewhere in the text, and the `{.unnumbered}` option to avoid giving it a section number, using this line at the top of the file:
+
+```markdown
+# Example pages {#sec-late .unnumbered}
+```
+:::
+
+This section of the template contains pages that each focus on an example of one type of helpful feature, embedding videos, presenting multiple choice questions (MCQs), custom callout boxes, and that kind of thing. They are intended to present the features in-use, and to provide a brief reference for how to employ them in your own books.
+

@@ -1,0 +1,137 @@
+# Getting started
+
+::: { .callout-important }
+This page provides a step-by-step tutorial for using the `sipbs-compbiol-book-template` GitHub template. By following this guide you will:
+
+- Create a new GitHub repository for your materials/project, using this book template.
+- Create a local copy of the repository on your machine, which you can edit using, for example, `RStudio`.
+- Set up the repository to use GitHub Pages as a platform for publishing your book/materials.
+- Make local changes to the files on your own machine, and update the public pages by _pushing_ them to GitHub.
+:::
+
+- [`sipbs-compbiol-book-template` repository](https://github.com/sipbs-compbiol/sipbs-compbiol-book-template)
+
+The basic steps we cover below are:
+
+1. Use the GitHub page for this template to create a new GitHub repository
+2. Clone the new repository to your local machine
+3. Set up the new repository to display as a website on GitHub Pages
+4. Edit your repository locally, and push changes back to GitHub (they will automatically update the webpage)
+
+## Step 1: Create a new GitHub repository from the template. {.unnumbered}
+
+1. Navigate to [this template's repository at GitHub](https://github.com/sipbs-compbiol/sipbs-compbiol-book-template) using your web browser.
+2. Click on the green `Use This Template` button at the top right of the `sipbs-compbiol-book-template` GitHub page (@fig-use-this-template). 
+
+::: { .callout-warning }
+You will only see this button if you are signed into your own GitHub account.
+
+If you do not already have a GitHub account, the [GitHub documentation](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) can walk you through the process of obtaining one, and logging in.
+:::
+
+::: {#fig-use-this-template}
+
+{{< video assets/videos/template-tutorial-video-1.mp4 >}}
+
+Video demonstration of using this template to create a new GitHub repository.
+
+:::
+
+3. A drop-down menu will appear. Click on the `Create a new repository` option. This will bring you to a page (@fig-use-this-template) for you to provide details about the new repository you want to create. 
+
+::: { .callout-tip }
+- Give your repository a unique, memorable, descriptive name. This will make it easier to find and help users understand what the repository is for.
+- Add a brief description, explaining the purpose of your new repository. This will help users understand what the repository is for.
+- Leave `Include all branches` unchecked. 
+- Make sure the repository status is set to `Public`.
+:::
+
+4. When you are satisfied that the details for creating your new repository are correct, click the green `Create repository` button (@fig-use-this-template).
+
+## Step 2: Clone the new repository to your personal machine {.unnumbered}
+
+You will be editing your online material on your own machine, and _pushing_ the repository to GitHub for version control and to create and update the webpage where people will read your material. You need to _clone_ your new repository to your machine, so that you can work on it. The first part of this process is to copy the URL that will let you clone the repository.
+
+::: { .callout-note }
+There are several equally valid methods for cloning a repository to your own computer. Covering all of these is beyond the scope of this tutorial, so we only present one method here. Any approach that works is fine.
+:::
+
+1. Click on the green `Code` button on your GitHub repository. This will reveal a drop-down box with a number of tabs and options (@fig-get-repo-url)
+2. With the `SSH` tab selected, click on the `Copy URL to clipboard` button.
+
+::: {#fig-get-repo-url}
+
+{{< video assets/videos/template-tutorial-video-1a.mp4 >}}
+
+Video demonstration: copying the URL for your repository so it can be cloned to your local computer.
+
+:::
+
+3. At the command-line/terminal, type the command `git clone ` and paste the repository URL that you copied to clipboard from your new repository (@fig-get-repo-url).
+
+## Step 3: Set up the local repository to render to GitHub Pages {.unnumbered}
+
+1. In the terminal, change directory to your new repository (e.g. if your new repository is called `my-new-repo`, use `cd my-new-repo` as in @fig-clone-repo).
+2. Run the command `quarto publish gh-pages`. You will be asked whether you want to publish the site to GitHub. Press the `Y` key to accept.
+
+::: {#fig-clone-repo}
+
+{{< video assets/videos/template-tutorial-video-2.mp4 >}}
+
+Video demonstration of cloning the repository to your local computer, and configuring it to render the document at GitHub Pages.
+
+:::
+
+After a short pause, your browser should automatically open your new site pages at GitHub. You will be able to navigate around the material just like a normal webpage (@fig-repo-site).
+
+::: {#fig-repo-site}
+
+{{< video assets/videos/template-tutorial-video-3.mp4 >}}
+
+Video demonstration of the published web materials.
+
+:::
+
+::: { .callout-important }
+You should not need to modify any further settings for changes that you now push to your GitHub repository to be made live at your repository's website.
+
+- The `quarto publish gh-pages` command automatically created a `gh-pages` branch at GitHub, and placed a rendered version of your new repository website in it (@fig-repo-config).
+- Your repository is automatically set to use this `gh-pages` branch of your repository to host its webpages (@fig-repo-config).
+- The template includes a GitHub Action that will automatically rebuild your Quarto site when any changes are pushed to the `main` repository. Once pushed, the changes will go live following a short delay to build the pages.
+
+::: {#fig-repo-config}
+
+{{< video assets/videos/template-tutorial-video-4.mp4 >}}
+
+Video demonstration of the repository configuration.
+
+:::
+:::
+
+## Step 4: Edit your local repository (in `RStudio`) and push changes to GitHub Pages {.unnumbered}
+
+You can now edit your online materials in the repository using `RStudio` in the usual way. When you are ready to make changes to the public site showing the materials, you only need to _commit_ your changes and _push_ them to the repository. The rest is handled automatically. The process is demonstrated in @fig-demo-commit, and the main actions are:
+
+- Open your repository in `RStudio`
+- Make an edit to any file that displays part of the materials online (e.g. `index.qmd`)
+- Commit your changes in the `git` tab of the `RStudio` window
+- Push your changes to the GitHub repository (and wait for the site to build)
+- Check the repository and GitHub Pages site to confirm the changes are live
+
+::: {#fig-demo-commit}
+
+{{< video assets/videos/template-tutorial-video-5.mp4 >}}
+
+Video demonstration of the process of updating the public site by editing a file and pushing changes to the repository.
+
+:::
+
+1. Open the template/R project using `RStudio` (e.g. double-click on the `.Rproj` file as in @fig-demo-commit).
+2. Make the desired edits to any files (e.g. modify the `index.qmd` file as in @fig-demo-commit).
+3. Save your changes locally.
+4. Select the changed files in the `git` tab of `RStudio` and click the `Commit` icon. A new window will appear.
+5. In the new window, enter a short commit string, and click the `Commit` button. The commit string will disappear. This _commits_ your changes to the local repository.
+6. Click on the `Push` icon (the up arrow) to _push_ your changes to the GitHub repository. A short message will appear, confirming that the files have transferred.
+7. To confirm the changes were pushed to the GitHub repository, you can visit the repository site and check the individual file contents.
+8. To confirm that the website is being updated, you can click on the `Actions` link at the top of the repository page. This will summarise recent `GitHub Actions` and will tell you if your site has been built, is in the process of being built, or if an error occurred.
+9. Once the site has been built by the GitHub Action, you will be able to visit the public GitHub Pages site for this repository, and inspect the changes, as in @fig-demo-commit.

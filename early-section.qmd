@@ -1,0 +1,9 @@
+# How Do I Use This? {#sec-intro .unnumbered}
+
+::: { .callout-tip }
+This `.qmd` file introduces a `Part` of the Quarto book. We use the `{#sec-REFERENCE}` option to make it cross-referenceable elsewhere in the text, and the `{.unnumbered}` option to avoid giving it a section number.
+:::
+
+This section of the template contains pages that provide an introduction to using this template for your own documents.
+
+

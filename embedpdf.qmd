@@ -1,0 +1,108 @@
+# Embedding PDF files
+
+There are two ways to embed PDF files in a Quarto page: by using native Quarto support, or with the `embedpdf` extension.
+
+::: { .callout-warning }
+This is useful only for HTML/webpage output, and embedding PDFs will not render as expected in Word document or other outputs.
+:::
+
+## Native embedding
+
+PDF files can be embedded in Quarto using the standard link syntax:
+
+```markdown
+![An example PDF document](example.pdf)
+```
+
+::: { .panel-tabset }
+
+## Appearance
+
+![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf)
+
+## Code
+
+```markdown
+![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf)
+```
+:::
+
+### Controlling embedded document size
+
+To set the height and width of the presentation of the embedded document, use brace notation:
+
+```markdown
+![An example PDF document](example.pdf){width=80% height=300px}
+```
+
+::: { .panel-tabset }
+
+## Appearance
+
+![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf){width=100% height=300px}
+
+## Code
+
+```markdown
+![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf){width=100% height=300px}
+```
+
+:::
+
+
+## `embedpdf`
+
+`embedpdf` is a Quarto extension that enables embedding of PDF files directly into Quarto HTML files. The extension is included as part of this template.
+
+- [`embedpdf` repository](https://github.com/jmgirard/embedpdf)
+- [`embedpdf` examples and documentation](https://jmgirard.github.io/embedpdf/example.html)
+
+With `embedpdf`, files are embedded using [shortcodes](https://quarto.org/docs/extensions/shortcodes.html), e.g.:
+
+```markdown
+{{{< pdf example.pdf >}}}
+```
+
+::: { .panel-tabset }
+
+## Appearance
+
+{{< pdf assets/papers/kiepas_et_al_2024.pdf >}}
+
+## Code
+
+```markdown
+{{{< pdf assets/papers/kiepas_et_al_2024.pdf >}}}
+```
+
+:::
+
+### Controlling embedded document size
+
+To set the height and width of the presentation of the embedded document, add these variables to the shortcode:
+
+```markdown
+{{{< pdf example.pdf height=200px width=80%>}}}
+```
+
+::: { .panel-tabset }
+
+## Appearance
+
+{{< pdf assets/papers/kiepas_et_al_2024.pdf height=300px width=100% >}}
+
+## Code
+
+```markdown
+{{{< pdf assets/papers/kiepas_et_al_2024.pdf height=300px width=100% >}}}
+```
+
+:::
+
+### Installing `embedpdf`
+
+The extension is packaged as part of this template, but if you do need to install `embedpdf` in other Quarto projects, use the command:
+
+```bash
+quarto add jmgirard/embedpdf
+```

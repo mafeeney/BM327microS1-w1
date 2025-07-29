@@ -1,0 +1,124 @@
+# These variables define the project; they may not need to be changed
+project:
+  type: book
+  output-dir: _book
+
+# These variables define the book contents - adjust them as necessary
+book:
+  # [A] BOOK TITLE
+  title: "THE TITLE OF THE BOOK"
+  reader-mode: true
+  
+  # The cover image and favicon; these may not need to be changed
+  cover-image: sipbs_compbio_800.png
+  favicon: icon_32.png
+  
+  # Sets the page footer text/images
+  # [B] FOOTER TEXT
+  page-footer:
+    left: |
+      THIS IS A SHORT PIECE OF FOOTER TEXT NAMING THE BOOK/AUTHORS
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+  # Sets the URL for the repository
+  # [C] GITHUB REPOSITORY URL
+  repo-url: https://github.com/sipbs-compbiol/REPOSITORY
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  # Sets author information and publication/presentation date
+  # [D] AUTHOR INFORMATION AND PUBLICATION/PRESENTATION DATE
+  author: "AUTHOR NAME"
+  date: "DD/MM/YY"
+
+  # Define chapters and sections here
+  # [E] CHAPTERS AND SECTIONS
+  chapters:
+    - index.qmd
+    - intro.qmd
+
+    - part: early-section.qmd
+      chapters: 
+        - tutorial.qmd
+        - howto.qmd
+        - links.qmd
+    
+    - part: example_pages.qmd
+      chapters: 
+        - callouts.qmd
+        - movies.qmd
+        - embedpdf.qmd
+        - quiz.qmd
+        - webr-example.qmd
+        - shinylive.qmd
+        - numbas.qmd
+
+    - references.qmd
+
+# Location of BibTeX format reference file; may not need to be changed
+bibliography: references.bib
+
+# Formatting and theme; may not need to be changed
+# The custom-styles.css is added to provide custom callouts
+# These may be changed as desired for your project, or removed if unwanted
+format:
+  html:
+    theme: cosmo
+    code-link: true
+    author-meta: "Leighton Pritchard"
+    #css: custom-styles.css
+  epub:
+    cover-image: cover.png
+  docx:
+    cover-image: cover.png
+    toc-depth: 1
+    link-citations: true
+    link-bibliography: true
+
+# Freeze output before pushing modifications to the repository when publishing
+# Should not need changing
+execute:
+  freeze: auto
+
+# Add custom callouts
+custom-callout:
+  callout-case-study:
+    title: "Case Study"
+    icon-symbol: "🔍"
+    color: "#FFA500"
+  callout-data:
+    icon-symbol: "📊"
+    title: "Data Analysis"
+    color: "#32CD32"
+  callout-discussion:
+    title: "Discussion Questions:"
+    icon-symbol: "✨"
+    color: "#BA55D3"
+  callout-microbe:
+    title: "Microbe Profile"
+    icon-symbol: "🧫"
+    color: "#1E90FF"
+  callout-thumbs-up:
+    title: "Great job!"
+    icon-symbol: "👍"
+    color: "#008000"
+  callout-todo:
+    icon-symbol: "📝"
+    color: "pink"
+  callout-challenge:
+    title: "Challenge"
+    icon-symbol: "🧑‍🏫"
+    color: "aquamarine"
+  callout-question:
+    title: "Question"
+    icon-symbol: "🙋"
+    color: "yellow"
+  callout-questions:
+    title: "Questions"
+    icon-symbol: "🙋️"
+    color: "yellow"    
+
+filters:
+  - custom-callout
+  - naquiz
