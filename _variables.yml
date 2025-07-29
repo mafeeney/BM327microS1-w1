@@ -5,15 +5,15 @@ ay: "2025-26"
 # These variables are used for identification of the book/repository administrator
 # [B] CHANGE THESE VARIABLES TO SET THE BOOK/REPO ADMIN
 admin:
-  name: "ADMINISTRATOR NAME"
-  email: "ADMINISTRATOR.EMAIL@strath.ac.uk"
-  homepage: "https://www.strath.ac.uk/staff/ADMINISTRATOR/"
+  name: "Morgan Feeney"
+  email: "morgan.feeney@strath.ac.uk"
+  homepage: "https://www.strath.ac.uk/staff/feeneymorgandr/"
 
 # These variables are used for links to the book repository
 # [C] CHANGE THESE VARIABLES TO SET THE GITHUB URLS FOR THE REPO
 github:
-  repo: "https://github.com/sipbs-compbiol/REPOSITORY"
-  issues: "https://github.com/sipbs-compbiol/REPOSITORY/issues"
+  repo: "https://github.com/mafeeney/BM327microS1-w1"
+  issues: "https://github.com/mafeeney/BM327microS1-w1/issues"
   
 # Example variables for the howto page
 global_variable: "This is an example of a global variable"

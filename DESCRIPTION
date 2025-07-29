@@ -1,11 +1,12 @@
-Package: PACKAGE_NAME
-Title: BOOK_TITLE
+Package: BM327microS1w1
+Title: BM327 microbiology S1 Workshop1
 Version: 0.1
 Authors@R: c(
-    person("FORENAME1", "SURNAME1", , "EMAIL.1@strath.ac.uk", role = c("aut", "cre")),
-    person("FORENAME2", "SURNAME2", , "EMAIL.2@strath.ac.uk", role = c("aut", "cre"))
+    person("Morgan", "Feeney", , "morgan.feeney@strath.ac.uk", role = c("aut", "cre")),
+    person("Arnaud", "Javelle", , "arnaud.javelle@strath.ac.uk", role = c("aut", "cre")),
+    person("Paul", "Hoskisson", , "paul.hoskisson@strath.ac.uk", role = c("aut", "cre"))
   )
-URL: https://github.com/sipbs-compbiol/sipbs-compbiol-book-template
+URL: https://github.com/mafeeney/BM327microS1-w1
 Depends: 
     R (>= 3.1.0)
 Imports:
@@ -13,9 +14,6 @@ Imports:
     ggplot2,
     flextable,
     kableExtra,
-    shinylive,
-    bslib,
-    DT,
 Suggests:
     knitr,
     sessioninfo

@@ -150,11 +150,11 @@ local function writeEnvironments(div)
       div.content = question(div.content)
     end
     if div.attr.classes:includes("button-hint") then
-      div = button(div, "Hint", "btn btn-info", "border-info")
+      div = button(div, "Hint", "btn btn-warning", "border-warning")
       -- quarto.log.output("=== button-hint ===")
     end
     if div.attr.classes:includes("button-answer") then
-      div = button(div, "Answer", "btn btn-danger", "border-danger")
+      div = button(div, "Answer", "btn btn-info", "border-info")
       -- quarto.log.output("=== button-answer ===")
     end
     return (div)

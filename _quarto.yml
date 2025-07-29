@@ -6,7 +6,7 @@ project:
 # These variables define the book contents - adjust them as necessary
 book:
   # [A] BOOK TITLE
-  title: "THE TITLE OF THE BOOK"
+  title: "BM327 microbiology S1 workshop 1"
   reader-mode: true
   
   # The cover image and favicon; these may not need to be changed
@@ -16,21 +16,19 @@ book:
   # Sets the page footer text/images
   # [B] FOOTER TEXT
   page-footer:
-    left: |
-      THIS IS A SHORT PIECE OF FOOTER TEXT NAMING THE BOOK/AUTHORS
-    right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+    center: |
+      BM327 Microbiology Semester 1 · 2025-26 · Dr Morgan Feeney
 
   # Sets the URL for the repository
   # [C] GITHUB REPOSITORY URL
-  repo-url: https://github.com/sipbs-compbiol/REPOSITORY
+  repo-url: https://github.com/mafeeney/BM327microS1-w1
   repo-branch: main
   repo-actions: [edit, issue]
 
   # Sets author information and publication/presentation date
   # [D] AUTHOR INFORMATION AND PUBLICATION/PRESENTATION DATE
-  author: "AUTHOR NAME"
-  date: "DD/MM/YY"
+  author: "Dr Morgan Feeney"
+  date: "01/09/2025"
 
   # Define chapters and sections here
   # [E] CHAPTERS AND SECTIONS
