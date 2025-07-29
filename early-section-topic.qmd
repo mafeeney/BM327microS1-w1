@@ -1,3 +1,0 @@
-# Early Section Topic {#sec-early-topic}
-
-This `.qmd` file represents some topic-related text. We use the `{#sec-REFERENCE}` option to make it cross-referenceable elsewhere in the text.
